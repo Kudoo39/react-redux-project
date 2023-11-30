@@ -1,7 +1,11 @@
 import React from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { setEdit } = props;
+  const handleEdit = () => {
+    setEdit(true);
+  };
   return (
     <>
       <header
@@ -11,7 +15,9 @@ const Header = () => {
         }}
       >
         <div className="info-container">
-          <div className="info-edit">Edit</div>
+          <div className="info-edit" onClick={handleEdit}>
+            Edit
+          </div>
           <img
             className="info-ava"
             src="https://i.redd.it/0gaywfkq6l071.png"
