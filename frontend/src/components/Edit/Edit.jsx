@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Edit.css";
 
 const Edit = () => {
@@ -10,8 +10,13 @@ const Edit = () => {
     "https://i.redd.it/snoovatar/avatars/57817a78-c5ef-4eb5-bd65-16d2986d5ad5.png",
     "https://i.redd.it/snoovatar/avatars/d940095a-98e2-4e5b-8c8f-3972dcda7cd7.png",
     "https://i.redd.it/snoovatar/avatars/b499fd96-7a10-4d02-abb6-755278d90f4b.png",
-    "https://i.redd.it/snoovatar/avatars/4b33fb6f-7c52-41c9-a9ac-8e04a505f099.png",
+    "https://i.redd.it/0gaywfkq6l071.png",
   ];
+  const [name, setName] = useState("Khang Nguyen");
+  const [age, setAge] = useState(21);
+  const [about, setAbout] = useState("I am a full-stack developer");
+  const [avatar, setAvatar] = useState("https://i.redd.it/0gaywfkq6l071.png");
+  const [theme, setTheme] = useState("#ccda07");
   return (
     <>
       <form>
@@ -20,25 +25,45 @@ const Edit = () => {
           <div className="edit-profile">Edit Profile</div>
           <div className="input-container">
             <label htmlFor="">Display name</label>
-            <input type="text" placeholder="Khang Nguyen" />
+            <input
+              type="text"
+              placeholder="Khang Nguyen"
+              onChange={(e) => setName(e.target.value)}
+            />
             <label htmlFor="">Age</label>
-            <input type="text" placeholder="21" />
+            <input
+              type="text"
+              placeholder="21"
+              onChange={(e) => setAge(e.target.value)}
+            />
             <label htmlFor="">About</label>
-            <textarea className="input-about"></textarea>
+            <textarea
+              className="input-about"
+              onChange={(e) => setAbout(e.target.value)}
+            ></textarea>
 
             <label htmlFor="">Profile Avatar</label>
             <div className="input-image-container">
               {Avatar.map((url) => {
                 return (
                   <>
-                    <img src={url} className="input-image" alt="" />
+                    <img
+                      onClick={(e) => setAvatar(e.target.url)}
+                      src={url}
+                      className="input-image"
+                      alt=""
+                    />
                   </>
                 );
               })}
             </div>
             <div className="theme-container">
               <label htmlFor="">Theme</label>
-              <input type="color" className="theme-color" />
+              <input
+                type="color"
+                className="theme-color"
+                onChange={(e) => setTheme(e.target.value)}
+              />
             </div>
           </div>
         </section>

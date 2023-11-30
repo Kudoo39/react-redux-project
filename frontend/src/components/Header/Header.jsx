@@ -10,8 +10,8 @@ const Header = (props) => {
     <>
       <header
         style={{
-          backgroundColor: "#c2a544",
-          backgroundImage: "linear-gradient(180deg, #c2a544 2%, #000000 100%)",
+          backgroundColor: "#ccda07",
+          backgroundImage: "linear-gradient(180deg, #ccda07 2%, #000000 100%)",
         }}
       >
         <div className="info-container">
