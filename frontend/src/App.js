@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       {!isEdit && <Header setEdit={setEdit} />}
-      {isEdit && <Edit />}
+      {isEdit && <Edit setEdit={setEdit} />}
     </div>
   );
 };

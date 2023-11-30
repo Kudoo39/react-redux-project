@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Edit.css";
 import Input from "../Input/Input";
 
-const Edit = () => {
+const Edit = ({ setEdit }) => {
   const Avatar = [
     "https://preview.redd.it/w68y4ueaut561.png?auto=webp&s=560b0669c7a47fd84b0d85d14b4c445645cf9808",
     "https://i.redd.it/snoovatar/avatars/0ec8fb04-b3b1-4a8d-bf06-ee4a877193e0.png",
@@ -18,9 +18,13 @@ const Edit = () => {
   const [about, setAbout] = useState("I am a full-stack developer");
   const [avatar, setAvatar] = useState("https://i.redd.it/0gaywfkq6l071.png");
   const [theme, setTheme] = useState("#ccda07");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEdit(false);
+  };
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <section className="edit-container">
           <button className="close">Save</button>
           <div className="edit-profile">Edit Profile</div>
