@@ -36,6 +36,10 @@ const Edit = () => {
                 );
               })}
             </div>
+            <div className="theme-container">
+              <label htmlFor="">Theme</label>
+              <input type="color" className="theme-color" />
+            </div>
           </div>
         </section>
       </form>
