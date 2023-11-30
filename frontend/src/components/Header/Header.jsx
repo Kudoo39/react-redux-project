@@ -4,7 +4,12 @@ import "./Header.css";
 const Header = () => {
   return (
     <>
-      <header>
+      <header
+        style={{
+          backgroundColor: "#c2a544",
+          backgroundImage: "linear-gradient(180deg, #c2a544 2%, #000000 100%)",
+        }}
+      >
         <div className="info-container">
           <div className="info-edit">Edit</div>
           <img
