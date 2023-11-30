@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Edit.css";
+import Input from "../Input/Input";
 
 const Edit = () => {
   const Avatar = [
@@ -24,23 +25,15 @@ const Edit = () => {
           <button className="close">Save</button>
           <div className="edit-profile">Edit Profile</div>
           <div className="input-container">
-            <label htmlFor="">Display name</label>
-            <input
-              type="text"
-              placeholder="Khang Nguyen"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <label htmlFor="">Age</label>
-            <input
-              type="text"
-              placeholder="21"
-              onChange={(e) => setAge(e.target.value)}
-            />
-            <label htmlFor="">About</label>
-            <textarea
+            <Input label="Display name" data={name} setData={setName} />
+            <Input label="Age" data={age} setData={setAge} />
+            <Input
+              inputType="textarea"
               className="input-about"
-              onChange={(e) => setAbout(e.target.value)}
-            ></textarea>
+              label="About"
+              data={about}
+              setData={setAbout}
+            />
 
             <label htmlFor="">Profile Avatar</label>
             <div className="input-image-container">

@@ -1,10 +1,24 @@
 import React from "react";
+import "../Edit/Edit.css";
 
-const Input = () => {
+const Input = ({ inputType, className, label, data, setData }) => {
   return (
     <>
-      <label htmlFor=""></label>
-      <input type="text" />
+      <label htmlFor="">{label}</label>
+      {inputType === "textarea" ? (
+        <textarea
+          type="text"
+          className={className}
+          placeholder={data}
+          onChange={(e) => setData(e.target.value)}
+        />
+      ) : (
+        <input
+          type="text"
+          placeholder={data}
+          onChange={(e) => setData(e.target.value)}
+        />
+      )}
     </>
   );
 };
