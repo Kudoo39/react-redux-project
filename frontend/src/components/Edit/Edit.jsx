@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Edit.css";
 import Input from "../Input/Input";
+import { useSelector } from "react-redux";
 
 const Edit = ({ setEdit }) => {
   const Avatar = [
@@ -13,6 +14,9 @@ const Edit = ({ setEdit }) => {
     "https://i.redd.it/snoovatar/avatars/b499fd96-7a10-4d02-abb6-755278d90f4b.png",
     "https://i.redd.it/0gaywfkq6l071.png",
   ];
+
+  const user = useSelector((state) => state.user);
+
   const [name, setName] = useState("Khang Nguyen");
   const [age, setAge] = useState(21);
   const [about, setAbout] = useState("I am a full-stack developer");
@@ -29,13 +33,13 @@ const Edit = ({ setEdit }) => {
           <button className="close">Save</button>
           <div className="edit-profile">Edit Profile</div>
           <div className="input-container">
-            <Input label="Display name" data={name} setData={setName} />
-            <Input label="Age" data={age} setData={setAge} />
+            <Input label="Display name" data={user.name} setData={setName} />
+            <Input label="Age" data={user.age} setData={setAge} />
             <Input
               inputType="textarea"
               className="input-about"
               label="About"
-              data={about}
+              data={user.about}
               setData={setAbout}
             />
 
