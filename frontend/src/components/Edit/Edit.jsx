@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Edit.css";
 import Input from "../Input/Input";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { update } from "../../redux/userSlice";
 
 const Edit = ({ setEdit }) => {
   const Avatar = [
@@ -16,15 +17,24 @@ const Edit = ({ setEdit }) => {
   ];
 
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
-  const [name, setName] = useState("Khang Nguyen");
-  const [age, setAge] = useState(21);
-  const [about, setAbout] = useState("I am a full-stack developer");
-  const [avatar, setAvatar] = useState("https://i.redd.it/0gaywfkq6l071.png");
-  const [theme, setTheme] = useState("#ccda07");
+  const [name, setName] = useState(user.name);
+  const [age, setAge] = useState(user.age);
+  const [about, setAbout] = useState(user.about);
+  const [avatar, setAvatar] = useState(user.avatar);
+  const [theme, setTheme] = useState(user.theme);
   const handleSubmit = (e) => {
     e.preventDefault();
     setEdit(false);
+    const updatedUser = {
+      name: name,
+      age: age,
+      about: about,
+      avatar: avatar,
+      theme: theme,
+    };
+    dispatch(update(updatedUser));
   };
   return (
     <>
@@ -49,7 +59,7 @@ const Edit = ({ setEdit }) => {
                 return (
                   <>
                     <img
-                      onClick={(e) => setAvatar(e.target.url)}
+                      onClick={(e) => setAvatar(e.target.src)}
                       src={url}
                       className="input-image"
                       alt=""
