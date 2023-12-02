@@ -3,6 +3,7 @@ import "./Edit.css";
 import Input from "../Input/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { update } from "../../redux/userSlice";
+import { updateUser } from "../../redux/apiRequests";
 
 const Edit = ({ setEdit }) => {
   const Avatar = [
@@ -34,7 +35,7 @@ const Edit = ({ setEdit }) => {
       avatar: avatar,
       theme: theme,
     };
-    dispatch(update(updatedUser));
+    updateUser(updatedUser, dispatch);
   };
   return (
     <>

@@ -8,6 +8,6 @@ app.post("/v1/update", (req, res) => {
   }, [2000]);
 });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("server is running...");
 });
