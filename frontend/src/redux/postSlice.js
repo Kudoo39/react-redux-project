@@ -13,7 +13,7 @@ export const postSlice = createSlice({
   },
   reducers: {
     createPost: (state, action) => {
-      state.posts = [...state.posts, action.pageload];
+      state.posts = [...state.posts, action.payload];
     },
   },
 });

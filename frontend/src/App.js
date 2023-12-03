@@ -5,6 +5,7 @@ import Edit from "./components/Edit/Edit";
 import Footer from "./components/Footer/Footer";
 import Post from "./components/Post/Post";
 import { useSelector } from "react-redux";
+import Display from "./components/Post/Display";
 
 const App = () => {
   const [isEdit, setEdit] = useState(false);
@@ -22,6 +23,9 @@ const App = () => {
       )}
       <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
       {isOpenPost && <Post setOpenPost={setOpenPost} />}
+      <div className="post-container">
+        <Display />
+      </div>
     </div>
   );
 };

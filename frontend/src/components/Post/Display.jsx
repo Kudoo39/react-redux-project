@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./post.css";
+import "./Post.css";
 
 const Display = () => {
   const post = useSelector((state) => state.post.posts);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Edit.css";
 import Input from "../Input/Input";
 import { useDispatch, useSelector } from "react-redux";
-import { update } from "../../redux/userSlice";
+//import { update } from "../../redux/userSlice";
 import { updateUser } from "../../redux/apiRequests";
 
 const Edit = ({ setEdit }) => {
