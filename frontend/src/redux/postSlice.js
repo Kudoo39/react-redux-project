@@ -10,10 +10,10 @@ export const postSlice = createSlice({
         tag: 0,
       },
     ],
-    reducers: {
-      createPost: (state, action) => {
-        state.posts = [...state.posts, action.pageload];
-      },
+  },
+  reducers: {
+    createPost: (state, action) => {
+      state.posts = [...state.posts, action.pageload];
     },
   },
 });

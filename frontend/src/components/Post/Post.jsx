@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Input from "../Input/Input";
 import "./Post.css";
+import { useDispatch } from "react-redux";
+import { createPost } from "../../redux/postSlice";
 
 const Post = ({ setOpenPost }) => {
   const [title, setTitle] = useState("Add a title");
+  const dispatch = useDispatch();
   const [description, setDescription] = useState("Add some descriptions");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const tags = ["None", "NSFW", "Mood", "Quotes", "Shitpost"];
@@ -14,6 +17,7 @@ const Post = ({ setOpenPost }) => {
       description: description,
       tag: selectedIndex,
     };
+    dispatch(createPost(newPost));
   };
   return (
     <div>

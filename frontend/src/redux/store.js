@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./userSlice";
-import portReducer from "./postSlice";
+import postReducer from "./postSlice";
 
 export default configureStore({
   reducer: {
