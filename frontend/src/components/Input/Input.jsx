@@ -1,5 +1,6 @@
 import React from "react";
 import "../Edit/Edit.css";
+import "../Post/Post.css";
 
 const Input = ({ inputType, className, label, data, setData }) => {
   return (

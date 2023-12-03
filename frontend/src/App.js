@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Edit from "./components/Edit/Edit";
 import Footer from "./components/Footer/Footer";
+import Post from "./components/Post/Post";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <p className="error">Error when fetching data from server!</p>
       )}
       <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
+      {isOpenPost && <Post />}
     </div>
   );
 };
