@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 const App = () => {
   const [isEdit, setEdit] = useState(false);
+  const [isOpenPost, setOpenPost] = useState(false);
   const loading = useSelector((state) => state.user.pending);
   const error = useSelector((state) => state.user.error);
   return (
@@ -18,7 +19,7 @@ const App = () => {
       {!isEdit && error && (
         <p className="error">Error when fetching data from server!</p>
       )}
-      <Footer />
+      <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
     </div>
   );
 };

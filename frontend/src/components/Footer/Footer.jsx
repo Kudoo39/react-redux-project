@@ -1,7 +1,15 @@
 import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-  return <div>This is a footer</div>;
+const Footer = ({ isOpenPost, setOpenPost }) => {
+  return (
+    <footer>
+      <div className="footer-title" onClick={() => setOpenPost(!isOpenPost)}>
+        {!isOpenPost && "+"}
+        {isOpenPost && "-"}
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
