@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Edit from "./components/Edit/Edit";
+import Footer from "./components/Footer/Footer";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       {!isEdit && error && (
         <p className="error">Error when fetching data from server!</p>
       )}
+      <Footer />
     </div>
   );
 };
