@@ -2,16 +2,26 @@ import React, { useState } from "react";
 import Input from "../Input/Input";
 import "./Post.css";
 
-const Post = () => {
+const Post = ({ setOpenPost }) => {
   const [title, setTitle] = useState("Add a title");
   const [description, setDescription] = useState("Add some descriptions");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const tags = ["None", "NSFW", "Mood", "Quotes", "Shitpost"];
+  const handlePost = () => {
+    setOpenPost(false);
+    const newPost = {
+      title: title,
+      description: description,
+      tag: selectedIndex,
+    };
+  };
   return (
     <div>
       <section className="makepost-container">
         <div className="makepost-navigation">
-          <p className="makepost-save">Post</p>
+          <p className="makepost-save" onClick={handlePost}>
+            Post
+          </p>
         </div>
         <Input
           data={title}

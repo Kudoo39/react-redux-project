@@ -21,7 +21,7 @@ const App = () => {
         <p className="error">Error when fetching data from server!</p>
       )}
       <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
-      {isOpenPost && <Post />}
+      {isOpenPost && <Post setOpenPost={setOpenPost} />}
     </div>
   );
 };
