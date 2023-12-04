@@ -26,12 +26,18 @@ const App = () => {
       <div className="post-container">
         <Display />
       </div> */}
-      <Header setEdit={setEdit} />
-      <div className="post-container">
-        <Display />
-      </div>
-      <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
-      {isOpenPost && <Post setOpenPost={setOpenPost} />}
+      {!isEdit && <Header setEdit={setEdit} />}
+      {!isEdit && (
+        <div className="post-container">
+          <Display />
+        </div>
+      )}
+      {!isEdit && <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />}
+      {!isEdit && isOpenPost && <Post setOpenPost={setOpenPost} />}
+
+      {isEdit && <Edit setEdit={setEdit} />}
+      {loading && <p className="loading">Loading...</p>}
+      {error && <p className="error">Error when fetching data from server!</p>}
     </div>
   );
 };
