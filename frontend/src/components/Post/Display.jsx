@@ -7,7 +7,7 @@ const Display = () => {
   return (
     <>
       <section className="post-container">
-        {post.map((post, index) => (
+        {post.slice(1).map((post, index) => (
           <div className="posts" key={index}>
             <p className="posts-title">{post.title}</p>
             <p className="posts-tags">{post.tag}</p>
