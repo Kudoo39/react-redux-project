@@ -1,8 +1,0 @@
-{
-  "functions": {
-    "api/v1/update.js": {
-      "runtime": "nodejs14.x",
-      "maxDuration": 1
-    }
-  }
-}
