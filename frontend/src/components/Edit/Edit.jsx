@@ -15,6 +15,10 @@ const Edit = ({ setEdit }) => {
     "https://i.redd.it/snoovatar/avatars/d940095a-98e2-4e5b-8c8f-3972dcda7cd7.png",
     "https://i.redd.it/snoovatar/avatars/b499fd96-7a10-4d02-abb6-755278d90f4b.png",
     "https://i.redd.it/0gaywfkq6l071.png",
+    "https://i.redd.it/snoovatar/avatars/d5ae4b95-833e-4a1a-b9f0-3b04026d3089.png",
+    "https://i.redd.it/snoovatar/avatars/1023016c-4628-411a-882a-088d08b8de84.png",
+    "https://styles.redditmedia.com/t5_62r51h/styles/image_widget_zfbrdrlx6yx81.png",
+    "https://i.redd.it/snoovatar/avatars/cc9ac367-edb8-45f1-a059-27436b5dc476.png",
   ];
 
   const user = useSelector((state) => state.user);
