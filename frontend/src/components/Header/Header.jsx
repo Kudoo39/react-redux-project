@@ -2,8 +2,7 @@ import React from "react";
 import "./Header.css";
 import { useSelector } from "react-redux";
 
-const Header = (props) => {
-  const { setEdit } = props;
+const Header = ({ setEdit }) => {
   const user = useSelector((state) => state.user);
   const handleEdit = () => {
     setEdit(true);

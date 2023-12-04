@@ -37,7 +37,7 @@ const Post = ({ setOpenPost }) => {
         <Input
           data={description}
           inputType="textarea"
-          setData={setTitle}
+          setData={setDescription}
           label="Descriptions"
           className="makepost-desc"
         />

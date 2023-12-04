@@ -14,7 +14,7 @@ const App = () => {
   const error = useSelector((state) => state.user.error);
   return (
     <div className="App">
-      {!isEdit && <Header setEdit={setEdit} />}
+      {/* {!isEdit && <Header setEdit={setEdit} />}
       {isEdit && <Edit setEdit={setEdit} />}
 
       {loading && <p className="loading">Loading...</p>}
@@ -25,7 +25,13 @@ const App = () => {
       {isOpenPost && <Post setOpenPost={setOpenPost} />}
       <div className="post-container">
         <Display />
+      </div> */}
+      <Header setEdit={setEdit} />
+      <div className="post-container">
+        <Display />
       </div>
+      <Footer isOpenPost={isOpenPost} setOpenPost={setOpenPost} />
+      {isOpenPost && <Post setOpenPost={setOpenPost} />}
     </div>
   );
 };
