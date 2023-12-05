@@ -2,15 +2,15 @@
 
 This project is a minimalist Reddit-like web application built with React, JavaScript, and Redux Toolkit. Customize the character's name, theme color, age, description, and avatar to make it your own. Share posts in a straightforward and user-friendly interface.
 
-# User Interface
+## User Interface
 ![Simple Reddit Clone Screenshot](frontend/src/assets/demo.png)
-# Edit
+## Edit
 ![Simple Reddit Clone Screenshot](frontend/src/assets/demo2.png)
-# Successfully
+## Successfully
 ![Simple Reddit Clone Screenshot](frontend/src/assets/demo3.png)
-# Post
+## Post
 ![Simple Reddit Clone Screenshot](frontend/src/assets/demo4.png)
-# Done
+## Done
 ![Simple Reddit Clone Screenshot](frontend/src/assets/demo5.png)
 
 ## Features
