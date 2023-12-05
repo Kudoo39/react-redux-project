@@ -1,9 +1,8 @@
 import { updateStart, updateError, updateSuccess } from "./userSlice";
 import axios from "axios";
-const axios = require("axios");
 
 const api = axios.create({
-  baseURL: "react-redux-project-mixx-kudoo39.vercel.app",
+  baseURL: "https://react-redux-project-kudoo39.vercel.app",
 });
 
 export const updateUser = async (user, dispatch) => {
